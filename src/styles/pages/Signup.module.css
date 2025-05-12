@@ -1,97 +1,77 @@
-.signup-page {
+.signupPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('/src/assets/images/background-two.jpg'); /* Pfad zum Hintergrundbild */
+  background-image: url('../../assets/images/background-two.jpg'); /* Pfad zum Hintergrundbild */
   background-size: cover;
   background-position: center;
   color: white;
 }
 
-.signup-container {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 30px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
+.signupContainer {
+    background-color: #1B1B22CC;
+    padding: 30px;
+    border-radius: 50px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    z-index: 3;
 }
 
-.signup-container h1 {
+.signupContainer h1 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.signup-form {
+.signupForm {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
+.inputGroup input {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    padding-left: 10px;
+    width: 100%;
+    background: #1C1A20CC;
+    padding: 10px 10px 10px 40px; /* Platz für das Icon innerhalb des Input-Felds */
+    border: 1px solid rgb(43,56,188);
+   border-radius: 10px;
+   width: 300px;
+    
+  }
+  
+  .inputGroup input::placeholder {
+    color: white;
+  }
 
-.input-group label {
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-}
+  .inputGroup input[type="email"] {
+    background-image: url('../../assets/images/mail.svg'); /* Pfad zum Mail-Icon */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Position des Icons innerhalb des Input-Felds */
+    background-size: 16px 16px; /* Größe des Icons */
+  }
+  
+  .inputGroup input[type="password"] {
+    background-image: url('../../assets/images/password.svg'); /* Pfad zum Passwort-Icon */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Position des Icons innerhalb des Input-Felds */
+    background-size: 16px 16px; /* Größe des Icons */
+  }
 
-.input-wrapper {
-  position: relative;
-}
-
-.input-wrapper input {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #555;
-  border-radius: 5px;
-  background: #333;
-  color: white;
-  width: 100%;
-}
-
-.input-wrapper input::placeholder {
-  color: #aaa;
-}
-
-.input-wrapper .toggle-visibility {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #aaa;
-}
-
-.error-message {
+.errorMessage {
   color: #ff4d4d;
-  font-size: 0.9rem;
   margin-top: -10px;
 }
 
-.signup-button {
-  background-color: #007bff;
-  color: white;
+.signupButton {
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
-  font-size: 1rem;
 }
 
-.signup-button:hover {
-  background-color: #0056b3;
-}
-
-.signup-footer {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  font-size: 0.8rem;
-}

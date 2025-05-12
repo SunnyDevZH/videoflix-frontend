@@ -4,7 +4,6 @@ import styles from '../styles/pages/Homepage.module.css';
 function Homepage() {
   return (
     <div className={styles.homepage}>
-      <div className={styles.background}>
         <div className={styles.overlay}>
           <div className={styles.content}>
             <h1>Movies, TV shows, and more</h1>
@@ -20,7 +19,6 @@ function Homepage() {
             </form>
           </div>
         </div>
-      </div>
     </div>
   );
 }

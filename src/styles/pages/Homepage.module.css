@@ -1,16 +1,11 @@
 .homepage {
   position: relative;
   height: 100vh;
-  color: white;
-  text-align: center;
-}
-
-.background {
   background-image: url('/src/assets/images/background-one.jpg');
   background-size: cover;
   background-position: center;
-  height: 100%;
-  width: 100%;
+  color: white;
+  text-align: center;
 }
 
 .overlay {
@@ -20,11 +15,13 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,1));
+  z-index: 1;
 }
-
 
 .content p {
   margin-bottom: 20px;
+  z-index: 2;
+
 }
 
 form{
@@ -45,8 +42,11 @@ form{
   border: 1px solid white;
   border-radius: 20px;
   width: 300px;
-  color: white;
 }
+
+.emailInput input::placeholder {
+    color: white;
+  }
 
 .signupButton {
   border: none;

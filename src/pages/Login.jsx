@@ -3,7 +3,7 @@ import styles from '../styles/pages/Login.module.css';
 
 function Login() {
   return (
-    <div className={styles.loginPage}>
+    <div className={styles.loginpage}>
       <div className={styles.overlay}>
         <div className={styles.loginContainer}>
           <h1>Log in</h1>

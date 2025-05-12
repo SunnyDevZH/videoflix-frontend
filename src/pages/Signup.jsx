@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import '../styles/pages/Signup.module.css';
+import styles from '../styles/pages/Signup.module.css';
 
 function Signup() {
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
@@ -18,46 +19,41 @@ function Signup() {
   };
 
   return (
-    <div className="signup-page">
-      <div className="signup-container">
+    <div className={styles.signupPage}>
+      <div className={styles.signupContainer}>
         <h1>Sign up</h1>
-        <form className="signup-form" onSubmit={handleSubmit}>
-          <div className="input-group">
-            <label htmlFor="password">Enter a password</label>
-            <div className="input-wrapper">
-              <input
-                type="password"
-                id="password"
-                placeholder="Enter a password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <span className="toggle-visibility">👁️</span>
-            </div>
+        <form className={styles.signupForm} onSubmit={handleSubmit}>
+          <div className={styles.inputGroup}>
+            <input
+              type="email"
+              id="email"
+              placeholder="Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
-          <div className="input-group">
-            <label htmlFor="confirm-password">Confirm Password</label>
-            <div className="input-wrapper">
-              <input
-                type="password"
-                id="confirm-password"
-                placeholder="Confirm Password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-              <span className="toggle-visibility">👁️</span>
-            </div>
+          <div className={styles.inputGroup}>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
-          {error && <p className="error-message">{error}</p>}
-          <button type="submit" className="signup-button">
-            Get Started
-          </button>
+          <div className={styles.inputGroup}>
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </div>
+          {error && <p className={styles.errorMessage}>{error}</p>}
+          <button type="submit" className={styles.signupButton}>Get Started</button>
         </form>
       </div>
-      <footer className="signup-footer">
-        <p>Datenschutz</p>
-        <p>Impressum</p>
-      </footer>
     </div>
   );
 }
