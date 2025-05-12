@@ -23,11 +23,19 @@ body{
 }
 
 h1{
+    color: white;
     font-size: 48px;
 }
 
 p{
+    color: white;
     font-size: 18px;
+}
+
+a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
 }
 
 button {
@@ -37,4 +45,8 @@ button {
   
 button:hover {
     background-color: rgba(45, 62, 223, 0.8); 
+}
+
+input{
+    color: white;
 }
