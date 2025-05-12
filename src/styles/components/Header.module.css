@@ -1,18 +1,28 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: transparent;
-  color: white;
-}
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Header soll die gesamte Breite einnehmen */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px; /* 40px Padding für oben, rechts, unten und links */
+    box-sizing: border-box; /* Verhindert, dass Padding die Gesamtbreite überschreitet */
+    color: white;
+    z-index: 10;
+  }
 
 .logo h1 {
   font-size: 24px;
   font-weight: bold;
 }
 
-.nav .login-button {
+.logoImage {
+  height: 40px; /* Passe die Höhe des Logos an */
+  width: auto;  /* Behalte das Seitenverhältnis bei */
+}
+
+.nav .loginButton {
   background-color: #007bff;
   color: white;
   border: none;
@@ -21,6 +31,6 @@
   cursor: pointer;
 }
 
-.nav .login-button:hover {
+.nav .loginButton:hover {
   background-color: #0056b3;
 }

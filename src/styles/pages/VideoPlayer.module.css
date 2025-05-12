@@ -1,0 +1,117 @@
+.video-player-page {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.back-button,
+.next-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.back-button:hover,
+.next-button:hover {
+  color: #007bff;
+}
+
+.optimization-text {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.video-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.video-element {
+  width: 100%;
+  max-height: 70vh;
+  background: #000;
+}
+
+.video-controls {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.control-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.control-button:hover {
+  color: #007bff;
+}
+
+.progress-bar {
+  width: 100%;
+}
+
+.progress-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: #555;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.progress-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.video-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.video-title {
+  font-weight: bold;
+}
+
+.video-duration {
+  font-size: 0.8rem;
+}

@@ -32,12 +32,12 @@
   margin-bottom: 20px;
 }
 
-.email-form {
+.emailForm {
   display: flex;
   gap: 10px;
 }
 
-.email-input {
+.emailInput {
   padding: 10px;
   font-size: 1rem;
   border: none;
@@ -45,7 +45,7 @@
   width: 300px;
 }
 
-.signup-button {
+.signupButton {
   background-color: #007bff;
   color: white;
   border: none;
