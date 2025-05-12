@@ -14,12 +14,13 @@
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.6);
+  
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,1));
 }
 
 .content h1 {
@@ -30,6 +31,7 @@
 .content p {
   font-size: 1.2rem;
   margin-bottom: 20px;
+  color: white;
 }
 
 .emailForm {
@@ -46,24 +48,10 @@
 }
 
 .signupButton {
-  background-color: #007bff;
-  color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.signup-button:hover {
-  background-color: #0056b3;
-}
 
-.footer {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  font-size: 0.9rem;
-}

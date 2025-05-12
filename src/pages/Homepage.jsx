@@ -16,16 +16,15 @@ function Homepage() {
                 className={styles.emailInput}
               />
               <button type="submit" className={styles.signupButton}>
-                Sign Up
-              </button>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                    Sign Up 
+                    <img src="../src/assets/images/chevron_right.svg" alt="arrow" style={{ marginLeft: '10px', width: '8px' }} />   
+                    </div>
+                </button>
             </form>
           </div>
         </div>
       </div>
-      <footer className={styles.footer}>
-        <p>Datenschutz</p>
-        <p>Impressum</p>
-      </footer>
     </div>
   );
 }
