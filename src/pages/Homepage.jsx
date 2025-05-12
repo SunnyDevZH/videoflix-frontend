@@ -10,11 +10,7 @@ function Homepage() {
             <h1>Movies, TV shows, and more</h1>
             <p>Enter your email to create or restart your subscription.</p>
             <form className={styles.emailform}>
-              <input
-                type="email"
-                placeholder="Email Address"
-                className={styles.emailInput}
-              />
+              <input type="email" placeholder="Email Address" className={styles.emailInput} />
               <button type="submit" className={styles.signupButton}>
               <div style={{ display: 'flex', alignItems: 'center' }}>
                     Sign Up 

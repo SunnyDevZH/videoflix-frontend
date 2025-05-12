@@ -23,15 +23,17 @@
   background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,1));
 }
 
-.content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
 
 .content p {
-  font-size: 1.2rem;
   margin-bottom: 20px;
   color: white;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .emailForm {
@@ -41,16 +43,17 @@
 
 .emailInput {
   padding: 10px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  border-radius: 20px;
   width: 300px;
+  color: white;
 }
 
 .signupButton {
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
 }
 

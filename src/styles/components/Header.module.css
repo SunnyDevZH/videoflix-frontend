@@ -12,19 +12,14 @@
     z-index: 10;
   }
 
-.logo h1 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
 .logoImage {
-  height: 40px; /* Passe die Höhe des Logos an */
-  width: auto;  /* Behalte das Seitenverhältnis bei */
+  height: 30px; 
+  width: auto; 
 }
 
 .nav .loginButton {
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
 }
