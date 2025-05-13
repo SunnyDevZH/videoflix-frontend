@@ -113,3 +113,10 @@ input {
     flex-direction: column;
     gap: 15px;
 }
+
+
+.errorMessage {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    margin-top: -10px;
+  }

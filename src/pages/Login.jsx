@@ -14,7 +14,7 @@ function Login() {
                         <div className="input">
                             <input type="password" id="password" placeholder="Password" />
                         </div>
-                        <button type="submit" className={styles.loginButton}>Log in</button>
+                        <button type="submit">Log in</button>
                     </form>
                     <div className={styles.loginLinks}>
                         <a href="/forgot-password">Forgot password?</a>
