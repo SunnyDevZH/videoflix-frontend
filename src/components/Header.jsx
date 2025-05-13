@@ -4,9 +4,8 @@ import logo from '../assets/icons/logo.svg';
 import styles from '../styles/components/Header.module.css';
 
 function Header() {
-    /* Login Button ausblenden in LoginPage */
-  const location = useLocation(); 
-  const isLoginPage = location.pathname === '/login';
+  const location = useLocation();
+  const isHiddenPage = location.pathname === '/login' || location.pathname === '/text-page';
 
   return (
     <header className={styles.header}>
@@ -14,7 +13,9 @@ function Header() {
         <img src={logo} alt="Videoflix Logo" className={styles.logoImage} />
       </div>
       <nav className={styles.nav}>
-        {!isLoginPage && (<button className={styles.loginButton}>Log in</button>)}
+        {!isHiddenPage && (
+          <button className={styles.loginButton}>Log in</button>
+        )}
       </nav>
     </header>
   );
