@@ -1,28 +1,32 @@
 .videoOfferPage {
-  background-color: rgb(20, 20, 20); 
-  color: white; 
-  min-height: 100vh;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    min-height: 100vh;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    z-index: 2;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 .logoutButton {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .logoutIcon {
-  width: 15px;
-  height: 15px;
-  margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
 }

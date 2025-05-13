@@ -2,12 +2,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Header soll die gesamte Breite einnehmen */
+    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px; /* 40px Padding für oben, rechts, unten und links */
-    box-sizing: border-box; /* Verhindert, dass Padding die Gesamtbreite überschreitet */
+    padding: 40px; 
+    box-sizing: border-box; 
     color: white;
     z-index: 10;
   }
