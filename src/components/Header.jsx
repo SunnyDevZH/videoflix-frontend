@@ -5,7 +5,12 @@ import styles from '../styles/components/Header.module.css';
 
 function Header() {
   const location = useLocation();
-  const isHiddenPage = location.pathname === '/login' || location.pathname === '/text-page';
+  const isHiddenButton = location.pathname === '/login' || location.pathname === '/text-page';
+  const isHiddenPage = location.pathname === '/video-offer' || location.pathname === '/video-player';
+
+  if (isHiddenPage) {
+    return null; // Header nicht anzeigen, wenn die Seite ausgeblendet werden soll
+  }
 
   return (
     <header className={styles.header}>
@@ -13,7 +18,7 @@ function Header() {
         <img src={logo} alt="Videoflix Logo" className={styles.logoImage} />
       </div>
       <nav className={styles.nav}>
-        {!isHiddenPage && (
+        {!isHiddenButton && (
           <button className={styles.loginButton}>Log in</button>
         )}
       </nav>

@@ -1,17 +1,12 @@
 import React from 'react';
-import '../styles/pages/VideoPlayer.module.css';
+import styles from '../styles/pages/VideoPlayer.module.css';
 
 function VideoPlayer() {
   return (
-    <div className="video-player-page">
-      <header className="video-player-header">
-        <button className="back-button">←</button>
-        <p className="optimization-text">Optimizing video for your screen 40%</p>
-        <button className="next-button">▶</button>
-      </header>
-      <div className="video-container">
+    <div className={styles.videoPlayerPage}>
+      <div className={styles.videoContainer}>
         <video
-          className="video-element"
+          className={styles.videoElement}
           controls
           autoPlay
           src="/src/assets/videos/majestic-whales.mp4"
@@ -19,18 +14,18 @@ function VideoPlayer() {
         >
           Your browser does not support the video tag.
         </video>
-        <div className="video-controls">
-          <div className="control-buttons">
-            <button className="control-button">⏪</button>
-            <button className="control-button">▶</button>
-            <button className="control-button">⏩</button>
+        <div className={styles.videoControls}>
+          <div className={styles.controlButtons}>
+            <button className={styles.controlButton}>⏪</button>
+            <button className={styles.controlButton}>▶</button>
+            <button className={styles.controlButton}>⏩</button>
           </div>
-          <div className="progress-bar">
-            <input type="range" min="0" max="100" value="40" className="progress-slider" />
+          <div className={styles.progressBar}>
+            <input type="range" min="0" max="100" value="40" className={styles.progressSlider} />
           </div>
-          <div className="video-info">
-            <p className="video-title">Majestic Whales</p>
-            <p className="video-duration">1:00:00</p>
+          <div className={styles.videoInfo}>
+            <p className={styles.videoTitle}>Majestic Whales</p>
+            <p className={styles.videoDuration}>1:00:00</p>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-.video-player-page {
+.videoPlayerPage {
   background-color: #000;
   color: #fff;
   min-height: 100vh;
@@ -6,16 +6,16 @@
   flex-direction: column;
 }
 
-.video-player-header {
+.videoPlayerHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  background-color: #111;
 }
 
-.back-button,
-.next-button {
+.backButton,
+.nextButton {
   background: none;
   border: none;
   color: #fff;
@@ -23,47 +23,44 @@
   cursor: pointer;
 }
 
-.back-button:hover,
-.next-button:hover {
+.backButton:hover,
+.nextButton:hover {
   color: #007bff;
 }
 
-.optimization-text {
-  font-size: 0.9rem;
+.optimizationText {
+  font-size: 1rem;
   color: #ccc;
 }
 
-.video-container {
-  flex: 1;
+.videoContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  position: relative;
+  justify-content: center;
+  padding: 20px;
 }
 
-.video-element {
+.videoElement {
   width: 100%;
-  max-height: 70vh;
-  background: #000;
+  max-width: 800px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-.video-controls {
-  width: 100%;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.9);
+.videoControls {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 
-.control-buttons {
+.controlButtons {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
-.control-button {
+.controlButton {
   background: none;
   border: none;
   color: #fff;
@@ -71,47 +68,32 @@
   cursor: pointer;
 }
 
-.control-button:hover {
+.controlButton:hover {
   color: #007bff;
 }
 
-.progress-bar {
+.progressBar {
+  width: 100%;
+  max-width: 800px;
+}
+
+.progressSlider {
   width: 100%;
 }
 
-.progress-slider {
-  width: 100%;
-  -webkit-appearance: none;
-  appearance: none;
-  height: 5px;
-  background: #555;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-}
-
-.progress-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 10px;
-  height: 10px;
-  background: #007bff;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.video-info {
+.videoInfo {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  font-size: 0.9rem;
+  width: 100%;
+  max-width: 800px;
+  font-size: 1rem;
   color: #ccc;
 }
 
-.video-title {
+.videoTitle {
   font-weight: bold;
 }
 
-.video-duration {
-  font-size: 0.8rem;
+.videoDuration {
+  text-align: right;
 }
