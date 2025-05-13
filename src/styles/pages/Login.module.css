@@ -1,82 +1,12 @@
 .loginpage {
-  position: relative;
-  height: 100vh;
-  background-image: url('../../assets/images/background-two.jpg'); /* Pfad zum Hintergrundbild */
-  background-size: cover;
-  background-position: center;
-  color: white;
+    position: relative;
+    height: 100vh;
+    background-image: url('../../assets/images/background-two.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
-
-.overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-}
-
-.loginContainer {
-  background-color: #1B1B22CC;
-  padding: 30px;
-  border-radius: 50px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  z-index: 3;
-}
-
-.loginContainer h1 {
-  margin-bottom: 20px;
-}
-
-.loginForm {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.inputGroup input {
-  background: none;
-  border: none;
-  font-size: 1rem;
-  padding-left: 10px;
-  width: 100%;
-  background: #1C1A20CC;
-  padding: 10px 10px 10px 40px; /* Platz für das Icon innerhalb des Input-Felds */
-  border: 1px solid rgb(43,56,188);
- border-radius: 10px;
- width: 300px;
-  
-}
-
-.inputGroup input::placeholder {
-  color: white;
-}
-
-.inputGroup input[type="email"] {
-  background-image: url('../../assets/images/mail.svg'); /* Pfad zum Mail-Icon */
-  background-repeat: no-repeat;
-  background-position: 10px center; /* Position des Icons innerhalb des Input-Felds */
-  background-size: 16px 16px; /* Größe des Icons */
-}
-
-.inputGroup input[type="password"] {
-  background-image: url('../../assets/images/password.svg'); /* Pfad zum Passwort-Icon */
-  background-repeat: no-repeat;
-  background-position: 10px center; /* Position des Icons innerhalb des Input-Felds */
-  background-size: 16px 16px; /* Größe des Icons */
-}
-
-.loginButton {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
 
 .loginLinks {
-  margin-top: 20px;
+    margin-top: 20px;
 }
