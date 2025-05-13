@@ -1,77 +1,16 @@
 .signupPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: url('../../assets/images/background-two.jpg'); /* Pfad zum Hintergrundbild */
-  background-size: cover;
-  background-position: center;
-  color: white;
-}
-
-.signupContainer {
-    background-color: #1B1B22CC;
-    padding: 30px;
-    border-radius: 50px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    z-index: 3;
-}
-
-.signupContainer h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.signupForm {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.inputGroup input {
-    background: none;
-    border: none;
-    font-size: 1rem;
-    padding-left: 10px;
-    width: 100%;
-    background: #1C1A20CC;
-    padding: 10px 10px 10px 40px; /* Platz für das Icon innerhalb des Input-Felds */
-    border: 1px solid rgb(43,56,188);
-   border-radius: 10px;
-   width: 300px;
-    
-  }
-  
-  .inputGroup input::placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../../assets/images/background-three.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
-  }
-
-  .inputGroup input[type="email"] {
-    background-image: url('../../assets/images/mail.svg'); /* Pfad zum Mail-Icon */
-    background-repeat: no-repeat;
-    background-position: 10px center; /* Position des Icons innerhalb des Input-Felds */
-    background-size: 16px 16px; /* Größe des Icons */
-  }
-  
-  .inputGroup input[type="password"] {
-    background-image: url('../../assets/images/password.svg'); /* Pfad zum Passwort-Icon */
-    background-repeat: no-repeat;
-    background-position: 10px center; /* Position des Icons innerhalb des Input-Felds */
-    background-size: 16px 16px; /* Größe des Icons */
-  }
+}
 
 .errorMessage {
-  color: #ff4d4d;
-  margin-top: -10px;
+    color: #ff4d4d;
+    margin-top: -10px;
 }
-
-.signupButton {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
