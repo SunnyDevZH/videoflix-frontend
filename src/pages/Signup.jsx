@@ -1,19 +1,29 @@
 import React, { useState } from 'react';
 import styles from '../styles/pages/Signup.module.css';
+import { registerUser } from '../api/auth'
 
 function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (password !== confirmPassword) {
             setError('Passwords must match.');
+            setSuccess('');
         } else {
-            setError('');
-            console.log('Account created successfully!');
+            try {
+                setError('');
+                const response = await registerUser(email.split('@')[0], email, password); // Benutzer registrieren
+                setSuccess('Account created successfully!');
+                console.log('Response:', response);
+            } catch (err) {
+                setError(err?.message || 'An error occurred during registration.');
+                setSuccess('');
+            }
         }
     };
 
@@ -30,6 +40,7 @@ function Signup() {
                                 placeholder="Email Address"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
+                                required
                             />
                         </div>
                         <div className="input">
@@ -39,6 +50,7 @@ function Signup() {
                                 placeholder="Password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
+                                required
                             />
                         </div>
                         <div className="input">
@@ -48,9 +60,11 @@ function Signup() {
                                 placeholder="Confirm Password"
                                 value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
+                                required
                             />
                         </div>
                         {error && <p className={styles.errorMessage}>{error}</p>}
+                        {success && <p className={styles.successMessage}>{success}</p>}
                         <button type="submit" className={styles.signupButton}>Get Started</button>
                     </form>
                 </div>
