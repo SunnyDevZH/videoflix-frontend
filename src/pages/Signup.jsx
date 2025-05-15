@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importiere useNavigate
 import styles from '../styles/pages/Signup.module.css';
-import { registerUser } from '../api/auth'
+import { registerUser } from '../api/auth';
 
 function Signup() {
     const [email, setEmail] = useState('');
@@ -8,6 +9,7 @@ function Signup() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const navigate = useNavigate(); // Initialisiere useNavigate
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,9 +19,10 @@ function Signup() {
         } else {
             try {
                 setError('');
-                const response = await registerUser(email.split('@')[0], email, password); // Benutzer registrieren
+                console.log(email, password); // <--- Hier prüfen!
+                const response = await registerUser(email, password);
                 setSuccess('Account created successfully!');
-                console.log('Response:', response);
+                setTimeout(() => navigate('/login'), 2000);
             } catch (err) {
                 setError(err?.message || 'An error occurred during registration.');
                 setSuccess('');

@@ -1,14 +1,14 @@
 import API from './api';
 
 // Benutzer registrieren
-export const registerUser = async (username, email, password) => {
-  const response = await API.post('accounts/register/', { username, email, password });
+export const registerUser = async (email, password) => {
+  const response = await API.post('accounts/register/', { email, password });
   return response.data;
 };
 
 // Benutzer einloggen
-export const loginUser = async (username, password) => {
-  const response = await API.post('accounts/token/', { username, password });
+export const loginUser = async (email, password) => {
+  const response = await API.post('accounts/token/', { username: email, password }); // Username ist die E-Mail
   return response.data;
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import HeroVideo from '../components/HeroVideo';
 import CategoryRow from '../components/CategoryRow';
 import styles from '../styles/pages/VideoOffer.module.css';
@@ -27,10 +28,12 @@ export const dramas = [...newVideos];
 export const romances = [...newVideos];
 
 function VideoOfferPage() {
+    const navigate = useNavigate();
 
     const handleLogout = () => {
-        console.log('User logged out');
-
+        localStorage.removeItem('access_token');
+        localStorage.removeItem('refresh_token');
+        navigate('/login');
     };
 
     return (
