@@ -1,15 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Importiere useNavigate
 import styles from '../styles/pages/TextPage.module.css';
 import arrowBackIcon from '../assets/icons/arrow_back.svg'; // Importiere das SVG-Bild
 
 function TextPage() {
+    const navigate = useNavigate(); // Initialisiere useNavigate
+
     return (
         <div className={styles.textPage}>
             <img
                 src={arrowBackIcon}
                 alt="Back"
                 className={styles.arrowBackIcon}
-                onClick={() => window.history.back()} // Zurück-Navigation
+                onClick={() => navigate('/login')} // Navigiere zur Login-Seite
             />
             <main className={styles.textPageContent}>
                 <section className={styles.textSection}>

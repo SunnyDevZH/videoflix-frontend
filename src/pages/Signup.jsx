@@ -1,31 +1,30 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importiere useNavigate
+import { useNavigate, useLocation  } from 'react-router-dom'; // Importiere useNavigate
 import styles from '../styles/pages/Signup.module.css';
 import { registerUser } from '../api/auth';
+import SuccessToast from '../components/SuccessToast';
 
 function Signup() {
-    const [email, setEmail] = useState('');
+    const location = useLocation(); // E-Mail aus dem state auslesen
+    const [email, setEmail] = useState(location.state?.email || ''); // E-Mail übernehmen
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
-    const [success, setSuccess] = useState('');
+    const [showToast, setShowToast] = useState(false);
     const navigate = useNavigate(); // Initialisiere useNavigate
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (password !== confirmPassword) {
             setError('Passwords must match.');
-            setSuccess('');
         } else {
             try {
                 setError('');
-                console.log(email, password); // <--- Hier prüfen!
-                const response = await registerUser(email, password);
-                setSuccess('Account created successfully!');
+                await registerUser(email, password);
+                setShowToast(true);
                 setTimeout(() => navigate('/login'), 2000);
             } catch (err) {
                 setError(err?.message || 'An error occurred during registration.');
-                setSuccess('');
             }
         }
     };
@@ -66,12 +65,17 @@ function Signup() {
                                 required
                             />
                         </div>
-                        {error && <p className={styles.errorMessage}>{error}</p>}
-                        {success && <p className={styles.successMessage}>{success}</p>}
+                        {error && <p className="errorMessage">{error}</p>}
                         <button type="submit" className={styles.signupButton}>Get Started</button>
                     </form>
                 </div>
             </div>
+            {showToast && (
+                <SuccessToast
+                    message="Signup Successful"
+                    onClose={() => setShowToast(false)}
+                />
+            )}
         </div>
     );
 }

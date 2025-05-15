@@ -7,7 +7,6 @@
     color: #fff;
     padding: 16px 32px;
     border-radius: 30px;
-    font-size: 1.1rem;
     font-weight: bold;
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
     z-index: 9999;
@@ -16,6 +15,6 @@
 
 @keyframes slideUp {
     to {
-        bottom: 40px;
+        bottom: 80px;
     }
 }

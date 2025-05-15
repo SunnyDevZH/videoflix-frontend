@@ -18,6 +18,7 @@
     right: 40px;
     cursor: pointer;
     height: 25px;
+    z-index: 10; 
 }
 
 .textPageContent {
