@@ -1,40 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import HeroVideo from '../components/HeroVideo';
-import CategoryRow from '../components/CategoryRow';
+import VideoPlayer from '../pages/VideoPlayer';  
 import styles from '../styles/pages/VideoOffer.module.css';
 import logo from '../assets/icons/symbol.svg';
 import logoutIcon from '../assets/icons/logout.svg';
-import Frame1 from '../assets/images/Frame1.jpg';
-import Frame2 from '../assets/images/Frame2.jpg';
-import Frame3 from '../assets/images/Frame3.jpg';
-import Frame4 from '../assets/images/Frame4.jpg';
-import Frame5 from '../assets/images/Frame5.jpg';
-import Frame6 from '../assets/images/Frame6.jpg';
-import Frame7 from '../assets/images/Frame7.jpg';
-
-export const newVideos = [
-    { thumbnail: Frame1, title: 'Frame 1' },
-    { thumbnail: Frame2, title: 'Frame 2' },
-    { thumbnail: Frame3, title: 'Frame 3' },
-    { thumbnail: Frame4, title: 'Frame 4' },
-    { thumbnail: Frame5, title: 'Frame 5' },
-    { thumbnail: Frame6, title: 'Frame 6' },
-    { thumbnail: Frame7, title: 'Frame 7' },
-];
-
-export const documentaries = [...newVideos];
-export const dramas = [...newVideos];
-export const romances = [...newVideos];
 
 function VideoOfferPage() {
     const navigate = useNavigate();
+    const [videos, setVideos] = useState([]);
 
     const handleLogout = () => {
         localStorage.removeItem('access_token');
         localStorage.removeItem('refresh_token');
         navigate('/login');
     };
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/api/videos/')
+            .then(res => res.json())
+            .then(data => setVideos(data))
+            .catch(err => console.error('Error loading videos:', err));
+    }, []);
 
     return (
         <div className={styles.videoOfferPage}>
@@ -46,10 +33,19 @@ function VideoOfferPage() {
                 </button>
             </header>
             <HeroVideo />
-            <CategoryRow title="New on Videoflix" videos={newVideos} />
-            <CategoryRow title="Documentary" videos={documentaries} />
-            <CategoryRow title="Drama" videos={dramas} />
-            <CategoryRow title="Romance" videos={romances} />
+
+            <h2>Available Videos</h2>
+            <div>
+                {videos.length === 0 && <p>Loading videos...</p>}
+                {videos.map(video => (
+                    <VideoPlayer
+                        key={video.id}
+                        videoUrl={video.video_file}  // URL aus Django API
+                        title={video.title}
+                        thumbnail={video.thumbnail}  // falls du Thumbnails hast
+                    />
+                ))}
+            </div>
         </div>
     );
 }
