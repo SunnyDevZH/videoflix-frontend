@@ -4,7 +4,7 @@ import styles from '../styles/components/Footer.module.css';
 
 function Footer() {
   const location = useLocation();
-  const isHiddenPage = location.pathname === '/video-player' || location.pathname === '/video-offer'; // Footer ausblenden auf /video-player und /video-offer
+  const isHiddenPage = location.pathname.startsWith('/video/') || location.pathname === '/video-offer'; // Footer ausblenden auf /video-player und /video-offer
 
   if (isHiddenPage) {
     return null; 

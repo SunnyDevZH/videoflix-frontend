@@ -7,7 +7,7 @@ function Header() {
   const location = useLocation();
   const navigate = useNavigate(); // Initialisiere useNavigate
   const isHiddenButton = location.pathname === '/login' || location.pathname === '/text-page';
-  const isHiddenPage = location.pathname === '/video-offer' || location.pathname === '/video-player';
+  const isHiddenPage = location.pathname.startsWith('/video/') || location.pathname === '/video-offer';
 
   if (isHiddenPage) {
     return null; // Header nicht anzeigen, wenn die Seite ausgeblendet werden soll

@@ -16,6 +16,12 @@
     top: 20%;
     left: 5%;
     color: white;
+
+    p{
+        max-width: 330px;
+    }
+
+    
 }
 
 .heroContainer::after {

@@ -24,7 +24,7 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/video-offer" element={<VideoOffer />} />
-          <Route path="/video-player" element={<VideoPlayer />} />
+          <Route path="/video/:videoId" element={<VideoPlayer />} />
           <Route path="/text-page" element={<TextPage />} />
         </Routes>
       </main>

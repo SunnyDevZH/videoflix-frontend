@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styles from '../styles/pages/VideoOffer.module.css';
 
-function VideoThumbnail({ video }) {
+function VideoThumbnail({ video, onClick }) {
   const videoRef = useRef(null);
 
   const handleMouseEnter = () => {
@@ -20,6 +20,8 @@ function VideoThumbnail({ video }) {
       className={styles.videoThumbnail}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}   // <-- Hier onClick einbinden
+      style={{ cursor: 'pointer' }} // Visueller Hinweis, dass klickbar ist
     >
       <video
         ref={videoRef}
