@@ -1,0 +1,38 @@
+.textPage {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.arrowBackIcon {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    height: 25px;
+    z-index: 10; 
+}
+
+.textPageContent {
+    margin: 80px;
+}
+
+.textSection {
+    margin-bottom: 30px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.blue {
+    color: #007bff;
+}

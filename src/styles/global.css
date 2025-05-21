@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'DM Sans';
+    src: url('/static/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('/static/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #1C1A20CC inset !important;
+  background-color: transparent !important;
+  -webkit-text-fill-color: white !important;
+  caret-color: white !important;
+  transition: background-color 9999s ease-in-out 0s !important;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgb(43, 56, 188);
+}
+
+
+* {
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    font-size: 48px;
+}
+
+h2{
+    color: white;
+    font-size: 32px;
+}
+
+p {
+    color: white;
+    font-size: 16px;
+}
+
+a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+button {
+    background-color: rgb(45, 62, 223);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+
+}
+
+button:hover {
+    background-color: rgba(45, 62, 223, 0.8);
+}
+
+input {
+    color: white;
+    font-size: 14px;
+}
+
+.input input {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    padding-left: 10px;
+    width: 100%;
+    background: #1C1A20CC;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid rgb(43, 56, 188);
+    border-radius: 10px;
+    width: 300px;
+    font-size: 14px;
+
+}
+
+.input input::placeholder {
+    color: white;
+}
+
+.input input[type="email"] {
+    background-image: url('../assets/icons/mail.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 16px 16px;
+}
+
+.input input[type="password"] {
+    background-image: url('../assets/icons/password.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 16px 16px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.container {
+    background-color: #1B1B22CC;
+    padding: 30px;
+    border-radius: 50px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    z-index: 3;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.errorMessage {
+    color: #ff4d4d;
+    margin-top: -10px;
+  }
