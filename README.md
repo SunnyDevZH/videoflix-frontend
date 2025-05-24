@@ -1,12 +1,47 @@
-# React + Vite
+# Videoflix Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Das Frontend für die Videoflix-Plattform, entwickelt mit React und Vite. Es bietet eine benutzerfreundliche Oberfläche für das Streaming und die Verwaltung von Videos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Video-Streaming**: Videos direkt im Browser abspielen.
+- **Benutzerverwaltung**: Registrierung, Login und Logout.
+- **Kategorisierung**: Videos nach Kategorien durchsuchen.
+- **Responsive Design**: Optimiert für Desktop und mobile Geräte.
+- **JWT-Authentifizierung**: Sicherer Zugriff auf geschützte Bereiche.
+- **Google Cloud Storage**: Abruf von Videos und Thumbnails über die Cloud.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologien
+
+- **React**: JavaScript-Bibliothek für die Benutzeroberfläche.
+- **Vite**: Schnelles Build-Tool für moderne Webanwendungen.
+- **Axios**: HTTP-Client für API-Anfragen.
+- **CSS Modules**: Modularisierte und wartbare CSS-Stile.
+- **Google Cloud Storage**: Speicherung und Abruf von Videos und Medien.
+
+---
+
+## ⚙️ Installation und Setup
+
+### 1. Repository klonen
+git clone https://github.com/SunnyDevZH/videoflix-frontend
+cd videoflix-backend
+
+### 2. Abhängigkeiten installieren
+npm install
+
+### 3. Entwicklungsserver starten
+npm run dev
+
+### 4. Anwendung im Browser öffnen
+Öffnen Sie die URL http://localhost:5173, um die Anwendung zu sehen.
+
+---
+
+## 📧 Kontakt
+Email: yannick.vaterlaus.dev@gmail.com
+
