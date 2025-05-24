@@ -144,3 +144,38 @@ input {
     color: #ff4d4d;
     margin-top: -10px;
   }
+
+/* Responsivität für iPhone 14 und kleinere Geräte */
+@media screen and (max-width: 390px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p, a {
+        font-size: 14px;
+        margin: 20px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .input input {
+        font-size: 12px;
+        width: 200px;
+    }
+
+    .container {
+        padding: 0px;
+        border-radius: 20px;
+    }
+
+    .form{
+        margin-bottom: 25px;
+    }
+}

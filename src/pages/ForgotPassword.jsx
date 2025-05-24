@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import styles from '../styles/pages/ForgotPassword.module.css';
 import { CURRENT_URL } from '../api/api';
+import SuccessToast from '../components/SuccessToast'; // Importiere die SuccessToast-Komponente
 
 function ForgotPassword() {
     const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
     const [error, setError] = useState('');
+    const [showToast, setShowToast] = useState(false); // Zustand für die Toast-Benachrichtigung
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setMessage('');
         setError('');
 
         try {
@@ -22,8 +22,8 @@ function ForgotPassword() {
             });
 
             if (response.ok) {
-                setMessage('If your email exists, you will receive password reset instructions.');
                 setEmail('');
+                setShowToast(true); // Zeige die Toast-Benachrichtigung an
             } else {
                 const data = await response.json();
                 setError(data.error || 'Something went wrong');
@@ -51,10 +51,15 @@ function ForgotPassword() {
                         </div>
                         <button type="submit">Send Email</button>
                     </form>
-                    {message && <p style={{ color: 'green' }}>{message}</p>}
                     {error && <p style={{ color: 'red' }}>{error}</p>}
                 </div>
             </div>
+            {showToast && (
+                <SuccessToast
+                    message="Password reset email sent successfully!"
+                    onClose={() => setShowToast(false)} // Schließe die Toast-Benachrichtigung
+                />
+            )}
         </div>
     );
 }

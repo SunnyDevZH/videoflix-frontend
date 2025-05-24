@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../styles/pages/ResetPassword.module.css';
+import SuccessToast from '../components/SuccessToast'; // Importiere die SuccessToast-Komponente
 
 function ResetPassword() {
     const [email, setEmail] = useState('');
@@ -7,7 +8,7 @@ function ResetPassword() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
-    const [success, setSuccess] = useState('');
+    const [showToast, setShowToast] = useState(false); // Zustand für die Toast-Benachrichtigung
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -29,12 +30,16 @@ function ResetPassword() {
             const data = await response.json();
 
             if (!response.ok) {
-                setError(data.error || 'Something went wrong.');
+                setError(data.error || 'Invalid code or user.'); // Fehlermeldung auf Deutsch
                 return;
             }
 
-            setSuccess('Password reset successfully!');
+            setShowToast(true); // Zeige die Toast-Benachrichtigung an
             setError('');
+            setEmail('');
+            setCode('');
+            setPassword('');
+            setConfirmPassword('');
         } catch (err) {
             setError('Failed to reset password.');
         }
@@ -59,7 +64,7 @@ function ResetPassword() {
                         </div>
                         <div className="input">
                             <input
-                                type="text"
+                                type="password"
                                 placeholder="Enter the 6-digit code"
                                 value={code}
                                 onChange={(e) => setCode(e.target.value)}
@@ -87,12 +92,17 @@ function ResetPassword() {
                                 required
                             />
                         </div>
-                        {error && <p className={styles.errorMessage}>{error}</p>}
-                        {success && <p className={styles.successMessage}>{success}</p>}
+                        {error && <p className="errorMessage">{error}</p>} 
                         <button type="submit">Reset my password</button>
                     </form>
                 </div>
             </div>
+            {showToast && (
+                <SuccessToast
+                    message="Password reset successfully!"
+                    onClose={() => setShowToast(false)} // Schließe die Toast-Benachrichtigung
+                />
+            )}
         </div>
     );
 }
