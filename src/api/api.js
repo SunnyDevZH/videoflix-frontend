@@ -5,7 +5,7 @@ const LOCAL_URL = 'http://127.0.0.1:8000/';
 const GOOGLE_CLOUD_URL = 'http://34.65.22.205/';
 
 // Aktuell verwendete URL (hier kannst du einfach wechseln)
-export const CURRENT_URL = LOCAL_URL; // Exportiere CURRENT_URL
+export const CURRENT_URL = GOOGLE_CLOUD_URL; // Exportiere CURRENT_URL
 
 // Zentrale Axios-Instanz
 const API = axios.create({

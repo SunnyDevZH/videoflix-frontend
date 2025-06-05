@@ -66,7 +66,7 @@ function VideoPlayerPage() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`${CURRENT_URL}/api/videos/${videoId}/`)
+        fetch(`${CURRENT_URL}api/videos/${videoId}/`)
             .then((res) => {
                 if (!res.ok) throw new Error('Video nicht gefunden');
                 return res.json();
