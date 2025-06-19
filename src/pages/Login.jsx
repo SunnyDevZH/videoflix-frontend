@@ -32,6 +32,7 @@ function Login() {
                     <h1>Log in</h1>
                     <form className="form" onSubmit={handleSubmit}>
                         <div className="input">
+                            <span className="inputIcon" />
                             <input
                                 type="email"
                                 id="email"
