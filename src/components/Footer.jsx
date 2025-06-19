@@ -12,10 +12,10 @@ function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <a href="/text-page" className={styles.link}>
+      <a href="/videoflix/text-page" className={styles.link}>
         Datenschutz
       </a>
-      <a href="/text-page" className={styles.link}>
+      <a href="/videoflix/text-page" className={styles.link}>
         Impressum
       </a>
     </footer>

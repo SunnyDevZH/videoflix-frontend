@@ -10,11 +10,11 @@ import TextPage from './pages/TextPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './styles/global.css';
-
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"></link>
 
 function App() {
   return (
-    <Router>
+    <Router basename="/videoflix">
       <Header />
       <main>
         <Routes>

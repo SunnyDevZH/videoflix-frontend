@@ -55,7 +55,7 @@ function Login() {
                         <button type="submit">Log in</button>
                     </form>
                     <div className={styles.loginLinks}>
-                        <a href="/forgot-password">Forgot password?</a>
+                        <a href="/videoflix/forgot-password">Forgot password?</a>
                         <p>
                             New to Videoflix? <a href="/signup">Sign Up now</a>
                         </p>

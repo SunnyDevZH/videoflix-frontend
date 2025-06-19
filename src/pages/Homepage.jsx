@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/pages/Homepage.module.css';
+import arrowIcon from '../assets/icons/chevron_right.svg'; 
+
 
 function Homepage() {
     const [email, setEmail] = useState(''); // State für die E-Mail
@@ -32,7 +34,7 @@ function Homepage() {
                             <div style={{ display: 'flex', alignItems: 'center' }}>
                                 Sign Up
                                 <img
-                                    src="../src/assets/icons/chevron_right.svg"
+                                    src={arrowIcon}
                                     alt="arrow"
                                     style={{ marginLeft: '10px', width: '8px' }}
                                 />
