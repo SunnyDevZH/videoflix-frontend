@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styles from '../styles/components/Footer.module.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   const location = useLocation();
@@ -12,12 +13,12 @@ function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <a href="/videoflix/text-page" className={styles.link}>
+      <Link to="/text-page" className={styles.link}>
         Datenschutz
-      </a>
-      <a href="/videoflix/text-page" className={styles.link}>
+      </Link>
+      <Link to="/text-page" className={styles.link}>
         Impressum
-      </a>
+      </Link>
     </footer>
   );
 }

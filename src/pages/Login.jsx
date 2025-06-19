@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/pages/Login.module.css';
 import { loginUser } from '../api/auth';
-import SuccessToast from '../components/SuccessToast'; // 1. Import
+import SuccessToast from '../components/SuccessToast'; 
+import { Link } from 'react-router-dom';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -56,9 +57,9 @@ function Login() {
                         <button type="submit">Log in</button>
                     </form>
                     <div className={styles.loginLinks}>
-                        <a href="/videoflix/forgot-password">Forgot password?</a>
+                        <Link to="/forgot-password" className={styles.link}>Forgot password?</Link>
                         <p>
-                            New to Videoflix? <a href="/videoflix/signup">Sign Up now</a>
+                            New to Videoflix? <Link to="/signup" className={styles.link}>Sign Up now</Link>
                         </p>
                     </div>
                 </div>
