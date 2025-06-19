@@ -36,6 +36,7 @@ function Signup() {
                     <h1>Sign up</h1>
                     <form className="form" onSubmit={handleSubmit}>
                         <div className="input">
+                            <span className="inputIcon" />
                             <input
                                 type="email"
                                 id="email"

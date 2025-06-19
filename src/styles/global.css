@@ -2,11 +2,11 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0px 1000px #1C1A20CC inset !important;
-  background-color: transparent !important;
-  -webkit-text-fill-color: white !important;
-  caret-color: white !important;
-  transition: background-color 9999s ease-in-out 0s !important;
+    -webkit-box-shadow: 0 0 0px 1000px #1C1A20CC inset !important;
+    background-color: transparent !important;
+    -webkit-text-fill-color: white !important;
+    caret-color: white !important;
+    transition: background-color 9999s ease-in-out 0s !important;
 }
 
 input:focus {
@@ -30,7 +30,7 @@ h1 {
     font-size: 48px;
 }
 
-h2{
+h2 {
     color: white;
     font-size: 32px;
 }
@@ -82,8 +82,8 @@ input {
 }
 
 .input input {
-  z-index: 1;
-  position: relative;
+    z-index: 1;
+    position: relative;
 }
 
 .input input::placeholder {
@@ -91,25 +91,26 @@ input {
 }
 
 .input input[type="email"] {
-    
+
     background-repeat: no-repeat;
     background-position: 10px center;
     background-size: 16px 16px;
-    
+
 }
 
 .inputIcon {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  background-image: url('../assets/icons/mail.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  pointer-events: none;
-  z-index: 2;
+    display: flex;
+    position: relative;
+    left: 10px;
+    top: 35px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url('../assets/icons/mail.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 2;
 }
 
 
@@ -150,7 +151,7 @@ input {
 .errorMessage {
     color: #ff4d4d;
     margin-top: -10px;
-  }
+}
 
 /* Responsivität für iPhone 14 und kleinere Geräte */
 @media screen and (max-width: 390px) {
@@ -162,7 +163,8 @@ input {
         font-size: 28px;
     }
 
-    p, a {
+    p,
+    a {
         font-size: 14px;
         margin: 20px;
     }
@@ -182,7 +184,7 @@ input {
         border-radius: 20px;
     }
 
-    .form{
+    .form {
         margin-bottom: 25px;
     }
 }

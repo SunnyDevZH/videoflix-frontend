@@ -58,7 +58,7 @@ function Login() {
                     <div className={styles.loginLinks}>
                         <a href="/videoflix/forgot-password">Forgot password?</a>
                         <p>
-                            New to Videoflix? <a href="/signup">Sign Up now</a>
+                            New to Videoflix? <a href="/videoflix/signup">Sign Up now</a>
                         </p>
                     </div>
                 </div>
